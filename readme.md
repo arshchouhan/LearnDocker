@@ -36,8 +36,7 @@ Beginner -> Intermediate
 docker-learning
 |
 |-- 00-installation
-|   |-- install-windows.md
-|   `-- docker-desktop-overview.md
+|   `-- installation.md
 |
 |-- 01-first-container
 |   |-- hello-world.md
