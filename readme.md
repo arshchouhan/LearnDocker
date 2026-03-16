@@ -1,85 +1,48 @@
-# Docker Learning Repository
+# 🐳 Docker Learning Journey
 
-<p align="center">
-	<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=2500&pause=700&color=2496ED&center=true&vCenter=true&width=920&lines=Beginner+to+Intermediate+Docker+Learning+Path;Hands-on+Examples+%2B+Clear+Concept+Notes;Install+%E2%86%92+Containers+%E2%86%92+Images+%E2%86%92+Dockerfile+%E2%86%92+Volumes+%E2%86%92+Networking+%E2%86%92+Compose" alt="Typing intro" />
-</p>
+> A structured, hands-on reference for learning Docker and containers from the ground up — covering installation, core concepts, and real-world usage on Windows with WSL 2.
 
-This repository documents a complete Docker learning journey through practical experiments and concept-first explanations.
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white)
+![WSL2](https://img.shields.io/badge/WSL2-FCC624?style=flat&logo=linux&logoColor=black)
+![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=flat)
 
-## Learning Roadmap
+---
 
-Beginner -> Intermediate
+## 📚 What this repo covers
 
-- Install Docker
-- Run first container
-- Understand images
-- Learn container lifecycle
-- Learn Dockerfile
-- Learn volumes
-- Learn networking
-- Learn Docker Compose
+This repository documents my end-to-end learning path with Docker — from environment setup to container management. Each section is written as a clear, reusable reference guide.
 
-## Topics Covered
+- **Environment setup** — Enabling virtualization, WSL 2, and installing Docker Desktop on Windows
+- **Core concepts** — Images, containers, volumes, networks, and the Docker CLI
+- **Docker Compose** — Defining and running multi-container applications
+- **Real-world workflows** — Building, tagging, and pushing images; writing efficient Dockerfiles
 
-1. Installation
-2. Running first container
-3. Images and Docker Hub
-4. Container lifecycle
-5. Dockerfile
-6. Volumes
-7. Networking
-8. Docker Compose
+---
 
-## Repository Structure
+## 🔗 Useful links
 
-```text
-docker-learning
-|
-|-- 00-installation
-|   `-- installation.md
-|
-|-- 01-first-container
-|   |-- hello-world.md
-|   `-- commands.md
-|
-|-- 02-docker-images
-|   |-- pulling-images.md
-|   `-- docker-hub.md
-|
-|-- 03-docker-containers
-|   |-- running-containers.md
-|   `-- container-lifecycle.md
-|
-|-- 04-dockerfile
-|   `-- simple-dockerfile
-|       |-- Dockerfile
-|       `-- README.md
-|
-|-- 05-volumes
-|   `-- volume-demo.md
-|
-|-- 06-networking
-|   `-- networking-demo.md
-|
-|-- 07-docker-compose
-|   `-- compose-demo
-|       |-- docker-compose.yml
-|       `-- README.md
+| Resource | Description |
+|---|---|
+| [Docker Official Docs](https://docs.docker.com) | Full reference for all Docker CLI commands and concepts |
+| [Docker Hub](https://hub.docker.com) | Public image registry — browse and pull official images |
+| [WSL 2 Installation Guide](https://learn.microsoft.com/en-us/windows/wsl/install) | Microsoft's official WSL 2 setup guide |
+| [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/) | Download page for Docker Desktop |
+| [Play with Docker](https://labs.play-with-docker.com) | Free browser-based Docker sandbox — no install needed |
+| [Docker Compose Docs](https://docs.docker.com/compose/) | Official reference for writing `docker-compose.yml` files |
+
+---
+
+## 📁 Structure
+
+```
+📦 docker-learning
+ ┣ 📂 01-installation        # Docker Desktop setup on Windows + WSL 2
+ ┣ 📂 02-core-concepts       # Images, containers, volumes, networks
+ ┣ 📂 03-docker-compose      # Multi-container app examples
+ ┗ 📂 04-dockerfiles         # Writing and optimising Dockerfiles
 ```
 
-## Suggested Study Order
+---
 
-1. Start with installation notes in `00-installation`.
-2. Run your first container in `01-first-container`.
-3. Learn image workflow in `02-docker-images`.
-4. Practice lifecycle commands in `03-docker-containers`.
-5. Build from a Dockerfile in `04-dockerfile`.
-6. Persist data in `05-volumes`.
-7. Connect services in `06-networking`.
-8. Orchestrate multiple services in `07-docker-compose`.
-
-## Why This Structure Works
-
-Instead of random notes, this follows the exact order most learners need:
-
-Installation -> First container -> Images -> Containers -> Dockerfile -> Volumes -> Networking -> Compose
+> 🗒️ Notes are written as I learn — expect updates as new topics are added.
