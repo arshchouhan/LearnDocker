@@ -23,7 +23,7 @@ Restart your PC and enter BIOS/UEFI by pressing **Del**, **F2**, or **F10** duri
 
 **Not sure if it's already on?** Open Task Manager -> Performance -> CPU. Look for **Virtualization: Enabled**.
 
-![Virtualization Enabled](../Assets/Virtualization.png)
+![Virtualization Enabled](../../Assets/Virtualization.png)
 
 ---
 
@@ -65,7 +65,7 @@ Docker Desktop is a complete local container environment. Here's what comes with
 
 The dashboard lets you start, stop, inspect, and delete containers without the command line if you prefer.
 
-![Docker Desktop Home](../Assets/docker%20desktop.png)
+![Docker Desktop Home](../../Assets/docker%20desktop.png)
 
 ---
 

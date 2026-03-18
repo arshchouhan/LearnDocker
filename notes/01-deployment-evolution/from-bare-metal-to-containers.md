@@ -328,5 +328,5 @@ Each era solved a real problem. Containers didn't make VMs obsolete — they gav
 <br/>
 
 <p align="center">
-  <sub>Part of my <a href="../readme.md">Docker Learning Journey</a> · Corrections and additions welcome via Issues or PRs</sub>
+      <sub>Part of my <a href="../../README.md">Docker Learning Journey</a> · Corrections and additions welcome via Issues or PRs</sub>
 </p>

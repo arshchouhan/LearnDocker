@@ -1,0 +1,18 @@
+services:
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    image: node:20-alpine
+    working_dir: /usr/src/app
+    command: ["node", "-e", "require('http').createServer((_,res)=>res.end('compose up')).listen(3000)"]
+    depends_on:
+      - mongodb
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongo-data:

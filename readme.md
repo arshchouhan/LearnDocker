@@ -35,17 +35,29 @@ This repository documents my end-to-end learning path with Docker — from envir
 
 ## 📁 Structure
 
-| Step | Folder | Focus |
-|---|---|---|
-| 00 | `00-installation` | Docker Desktop setup on Windows + WSL 2 |
-| 01 | `01-deployment-evolution` | From bare metal to containers |
-| 02 | `02-first-container` | Run your first Docker container |
-| 03 | `03-docker-images` | Pulling and managing Docker images |
-| 04 | `04-docker-containers` | Container lifecycle and runtime commands |
-| 05 | `05-dockerfile` | Writing a simple Dockerfile |
-| 06 | `06-volumes` | Persisting data with volumes |
-| 07 | `07-networking` | Container networking basics |
-| 08 | `08-docker-compose` | Multi-container apps with Compose |
+```text
+📦 docker-learning
+ ┣ 📂 notes/              # Theory docs and conceptual lessons
+ ┃ ┣ 📂 00-installation
+ ┃ ┣ 📂 01-deployment-evolution
+ ┃ ┣ 📂 02-first-container
+ ┃ ┣ 📂 03-docker-images
+ ┃ ┣ 📂 04-docker-containers
+ ┃ ┣ 📂 05-volumes
+ ┃ ┗ 📂 06-networking
+ ┣ 📂 dockerfiles/        # Dockerfile examples with explanations
+ ┃ ┗ 📂 simple-dockerfile
+ ┣ 📂 compose-projects/   # Docker Compose stacks
+ ┃ ┗ 📂 compose-demo
+ ┣ 📂 commands/           # Docker CLI cheatsheets
+ ┃ ┗ 📜 docker-cli-basics.md
+ ┣ 📂 troubleshooting/    # Errors and fixes
+ ┣ 📂 projects/           # Real working containerized apps
+ ┃ ┗ 📂 compose-demo-app
+ ┣ 📜 CHANGELOG.md        # Daily learning log
+ ┣ 📜 README.md
+ ┗ 📂 Assets/
+```
 
 ---
 
