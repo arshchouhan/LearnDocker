@@ -54,6 +54,7 @@ This repository documents my end-to-end learning path with Docker — from envir
  ┣ 📂 troubleshooting/    # Errors and fixes
  ┣ 📂 projects/           # Real working containerized apps
  ┃ ┗ 📂 compose-demo-app
+ ┃ ┗ 📂 node-mongo-users-api
  ┣ 📜 CHANGELOG.md        # Daily learning log
  ┣ 📜 README.md
  ┗ 📂 Assets/

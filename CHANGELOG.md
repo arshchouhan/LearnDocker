@@ -2,6 +2,12 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-03-19
+
+- Added `projects/node-mongo-users-api` as a basic Node.js app that connects to MongoDB.
+- Implemented API endpoint `GET /api/users` to fetch all users from database `arsh`.
+- Added a simple browser page at `/` to trigger and view API results.
+
 ## 2026-03-18
 
 - Reorganized repository into learning-focused folders:
