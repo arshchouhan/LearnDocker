@@ -1,0 +1,19 @@
+{
+  "name": "nodejscontainer",
+  "version": "1.0.0",
+  "description": "Simple Node.js app prepared for Docker containerization",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "docker",
+    "container"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
