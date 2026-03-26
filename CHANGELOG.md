@@ -2,6 +2,10 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-03-26
+
+- Added `notes/04-docker-containers/environment-variables-and-interactive-shells.md` with practical command notes on `-e`, PowerShell `$VAR` expansion behavior, `-it` usage, and `docker run` vs `docker start`.
+
 ## 2026-03-24
 
 - Added `notes/08-docker-context/docker-context-basics.md` covering Docker context concepts and core commands.
