@@ -72,3 +72,21 @@ docker stop vol-demo
 docker rm vol-demo
 docker volume ls
 ```
+## Advanced: Backup and Restore
+
+To back up a volume, you can run a temporary container that mounts the volume and a host directory, then creates a tarball of the volume's contents.
+
+```bash
+docker run --rm -v mydata:/volume -v $(pwd):/backup alpine tar cvf /backup/backup.tar /volume
+```
+
+To restore:
+
+```bash
+docker run --rm -v mydata:/volume -v $(pwd):/backup alpine sh -c "cd /volume && tar xvf /backup/backup.tar --strip 1"
+```
+
+## Anonymous vs. Named Volumes
+
+- **Named Volumes**: Explicitly named (e.g., `mydata`). Easier to manage and persist.
+- **Anonymous Volumes**: Created without a name. They get a random hash as a name. Usually used for temporary data that doesn't need to be easily referenced later.

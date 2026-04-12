@@ -2,6 +2,11 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-04-12
+
+- Expanded `volume-demo.md` with advanced backup and restore strategies for Docker Volumes.
+- Added documentation on anonymous vs. named volumes.
+
 ## 2026-03-26
 
 - Added `notes/04-docker-containers/environment-variables-and-interactive-shells.md` with practical command notes on `-e`, PowerShell `$VAR` expansion behavior, `-it` usage, and `docker run` vs `docker start`.
