@@ -24,6 +24,12 @@ All notable updates to this Docker learning repository are recorded here.
 - Updated `networking-demo.md` with details on DNS resolution in user-defined networks.
 - Added examples for communicating between containers using container names.
 
+## 2026-04-13
+
+- Integrated `projects/Pyhton CICd Project` - a Flask-based application with a complete CI/CD pipeline.
+- Configured GitHub Actions and Tekton pipelines for automated testing and deployment.
+- Added Dockerfile for containerizing the Python application.
+
 ## 2026-04-12
 
 - Expanded `volume-demo.md` with advanced backup and restore strategies for Docker Volumes.
