@@ -30,6 +30,11 @@ All notable updates to this Docker learning repository are recorded here.
 - Updated `networking-demo.md` with details on DNS resolution in user-defined networks.
 - Added examples for communicating between containers using container names.
 
+## 2026-04-14
+
+- Introduced Multi-stage builds in `dockerfiles/multistage.Dockerfile`.
+- Demonstrated how to reduce image size by separating build and runtime environments.
+
 ## 2026-04-13
 
 - Integrated `projects/Pyhton CICd Project` - a Flask-based application with a complete CI/CD pipeline.
