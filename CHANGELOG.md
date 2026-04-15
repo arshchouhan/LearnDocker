@@ -2,6 +2,11 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-04-15
+
+- Updated `networking-demo.md` with details on DNS resolution in user-defined networks.
+- Added examples for communicating between containers using container names.
+
 ## 2026-04-12
 
 - Expanded `volume-demo.md` with advanced backup and restore strategies for Docker Volumes.

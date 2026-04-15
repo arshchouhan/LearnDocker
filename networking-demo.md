@@ -151,3 +151,41 @@ It allows containers on different hosts to join a single logical network.
 
 Macvlan mode allows a container to appear as a physical device on the network.
 The container gets its own MAC address and can be treated like a separate host.
+## DNS Resolution in User-Defined Networks
+
+One major advantage of user-defined networks (like `my_bridge` in the examples above) is **automatic DNS resolution**. Containers on the same user-defined network can communicate with each other using their **container names** as hostnames.
+
+### Example: Communication by Name
+
+1. Create a custom network:
+   ```bash
+   docker network create app-net
+   ```
+
+2. Start two containers on that network:
+   ```bash
+   docker run -d --name db --net app-net redis
+   docker run -d --name web --net app-net alpine sleep 3600
+   ```
+
+3. Ping the DB from the Web container using its name:
+   ```bash
+   docker exec web ping -c 3 db
+   ```
+
+Docker's internal DNS server will resolve `db` to its internal IP address within `app-net`.
+
+> [!IMPORTANT]
+> This automatic DNS resolution **does not work** on the default `bridge` network. On the default bridge, you must use `--link` (deprecated) or communicate via IP addresses. Always use user-defined networks for production apps.
+
+## Docker DNS Configuration
+
+You can configure custom DNS settings for containers using flags:
+
+- `--dns`: Set a custom DNS server.
+- `--dns-search`: Set a custom DNS search domain.
+- `--hostname`: Set the container's hostname.
+
+```bash
+docker run -d --name my-app --dns 8.8.8.8 my-image
+```
