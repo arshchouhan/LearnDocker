@@ -247,6 +247,7 @@ docker context use prod-server
 ## 🔐 Advanced: TLS-Protected Context
 
 ```bash
+```bash
 # Create context with TLS certificates
 docker context create secure-prod \
   --description "TLS-protected production" \
@@ -257,6 +258,38 @@ docker context create secure-prod \
 # Verify TLS connection
 docker context use secure-prod
 docker version
+```
+
+---
+
+## ☁️ Cloud-Native Contexts (AWS & Azure)
+
+Docker provides native integration with cloud providers, allowing you to deploy containers directly to AWS ECS or Azure ACI using Docker CLI.
+
+### AWS ECS Context
+
+```bash
+# Create AWS context
+docker context create ecs my-aws-context
+
+# Use AWS context
+docker context use my-aws-context
+
+# Deploy a compose file to ECS
+docker compose up
+```
+
+### Azure ACI Context
+
+```bash
+# Login to Azure
+docker login azure
+
+# Create ACI context
+docker context create aci my-aci-context
+
+# Use ACI context
+docker context use my-aci-context
 ```
 
 ---
