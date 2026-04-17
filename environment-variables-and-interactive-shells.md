@@ -69,9 +69,34 @@ docker run <container-id> -e MY_VAR=arsh httpd
 
 Error: `docker run` expects an image name, not a container ID.
 
-## 4. Key Takeaways
+## 5. Passing Multiple Variables with `--env-file`
 
-1. Use `-e KEY=VALUE` with `docker run`, not `docker start`.
-2. Use `-it` together for interactive containers (`-i` = stdin, `-t` = tty).
-3. In PowerShell, `$VAR` can be expanded before Docker sees it. Use single quotes or backtick escaping.
-4. Use `docker run <image> /bin/sh` to override the default command and open a shell.
+When you have many environment variables, instead of using multiple `-e` flags, you can use an environment file.
+
+```bash
+# .env file
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=secret
+```
+
+```bash
+docker run --env-file .env my-image
+```
+
+## 6. TTY and Signals (Graceful Shutdown)
+
+When running a container in interactive mode (`-it`), Docker forwards signals like `SIGINT` (Ctrl+C) to the process.
+
+- **SIGTERM (15)**: Request the process to terminate. Most applications handle this by cleaning up before exiting.
+- **SIGKILL (9)**: Force the process to stop immediately.
+
+If you run a container in the background (`-d`), you can send signals using:
+
+```bash
+docker stop <container> # Sends SIGTERM, then SIGKILL after 10s
+docker kill <container> # Sends SIGKILL immediately
+```
+
+> [!TIP]
+> Always try to use `docker stop` to allow your application to close database connections and finish ongoing tasks.
