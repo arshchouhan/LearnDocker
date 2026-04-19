@@ -201,23 +201,43 @@ docker run --memory="512m" --cpus="0.5" my-app:1.0
 
 ---
 
-## ⚡ Performance Optimization
+### Docker BuildKit
 
-### Layer Caching Strategy
+BuildKit is the modern build engine for Docker. It provides faster builds, secret management, and cache exports.
+
+To enable BuildKit (if not default):
+```bash
+export DOCKER_BUILDKIT=1
+docker build .
+```
+
+#### Secrets with BuildKit
+You can pass secrets to your build without baking them into the image:
 
 ```dockerfile
-# ❌ Bad: Dependencies rebuild on any source change
-FROM node:18-alpine
-WORKDIR /app
-COPY . .
-RUN npm install
+# syntax=docker/dockerfile:1
+FROM alpine
+RUN --mount=type=secret,id=mysecret cat /run/secrets/mysecret
+```
 
-# ✅ Good: Dependencies cached, only source code updated
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
+```bash
+docker build --secret id=mysecret,src=my_secret.txt .
+```
+
+### Image Layers and Caching
+
+Each instruction in a Dockerfile creates a read-only layer. When you rebuild an image, Docker reuse layers that haven't changed.
+
+- **Layer order matters**: Place instructions that change frequently (like `COPY . .`) at the bottom.
+- **Combine commands**: Use `&&` to combine `RUN` commands to reduce the number of layers.
+
+```dockerfile
+# ❌ Efficient but creates two layers
+RUN apt-get update
+RUN apt-get install -y curl
+
+# ✅ Best practice: One layer
+RUN apt-get update && apt-get install -y curl
 ```
 
 ### Multi-Stage Build (Reduce Image Size)
