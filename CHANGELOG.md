@@ -19,6 +19,12 @@ All notable updates to this Docker learning repository are recorded here.
 - Updated `docker-hub.md` with instructions for tagging and pushing custom images.
 - Documented login procedures for both registries.
 
+## 2026-04-20
+
+- Integrated `projects/IBMCodeengienPRoject` - a comprehensive DevOps capstone project.
+- Features microservices architecture containerized with Docker.
+- Includes deployment configurations for IBM Cloud Code Engine and automated CI/CD workflows.
+
 ## 2026-04-15
 
 - Updated `networking-demo.md` with details on DNS resolution in user-defined networks.
