@@ -2,6 +2,12 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-04-22
+
+- Added `ghcr-guide.md` covering GitHub Container Registry usage and login.
+- Updated `docker-hub.md` with instructions for tagging and pushing custom images.
+- Documented login procedures for both registries.
+
 ## 2026-04-15
 
 - Updated `networking-demo.md` with details on DNS resolution in user-defined networks.

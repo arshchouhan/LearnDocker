@@ -14,9 +14,23 @@ Docker Hub is a public registry where Docker images are hosted.
 2. Pull using `docker pull <name>:<tag>`
 3. Run with `docker run`
 
-## Examples
+## Pushing to Docker Hub
 
-```bash
-docker pull nginx
-docker pull mongo:7
-```
+1. Log in to your account:
+   ```bash
+   docker login
+   ```
+
+2. Tag your local image:
+   ```bash
+   docker tag my-image <YOUR_USERNAME>/my-image:v1
+   ```
+
+3. Push the image:
+   ```bash
+   docker push <YOUR_USERNAME>/my-image:v1
+   ```
+
+## Private Repositories
+
+Docker Hub allows one free private repository. For more, a paid plan is required.
