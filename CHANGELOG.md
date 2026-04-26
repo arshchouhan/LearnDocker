@@ -2,6 +2,12 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-04-26
+
+- Documented Docker Swarm service types (Replicated vs Global).
+- Added `commands/swarm-commands.md` as a quick CLI reference for Swarm management.
+- Included guide on performing rolling updates and rollbacks in Swarm.
+
 ## 2026-04-22
 
 - Added `ghcr-guide.md` covering GitHub Container Registry usage and login.

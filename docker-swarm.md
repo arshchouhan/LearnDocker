@@ -226,4 +226,34 @@ docker swarm leave
 
 Docker Swarm provides a lightweight, integrated solution for container orchestration. While Kubernetes offers more features, Swarm excels in simplicity and ease of use, making it ideal for smaller deployments or teams new to orchestration. Choose Swarm when you need a straightforward solution without operational complexity.
 
+## Service Types
+
+There are two ways to deploy services in a swarm:
+
+- **Replicated Services**: You specify the number of replicas (e.g., `web=3`). The manager distributes these across the available nodes.
+- **Global Services**: Exactly one task runs on every node in the swarm. Useful for agents or monitoring tools (e.g., `prom/node-exporter`).
+
+```bash
+# Global service example
+docker service create --name agent --mode global alpine
+```
+
+## Rolling Updates
+
+Swarm allows you to update services without downtime. You can control the parallelism and delay between updates.
+
+```bash
+docker service update \
+  --image nginx:1.25.1 \
+  --update-parallelism 2 \
+  --update-delay 10s \
+  web
+```
+
+If an update fails, you can roll back:
+
+```bash
+docker service rollback web
+```
+
 **Next Steps**: Explore advanced networking, implement health checks, and practice rolling updates to master Docker Swarm orchestration.
