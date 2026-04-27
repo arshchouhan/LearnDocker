@@ -134,6 +134,24 @@ docker service create \
 
 ---
 
+## Monitoring Swarm Services
+
+For real-time monitoring of your swarm cluster, you can use a visualizer. This is typically deployed as a global service or a separate stack.
+
+```bash
+# Deploy a visualizer service
+docker service create \
+  --name visualizer \
+  --publish 8080:8080 \
+  --constraint 'node.role == manager' \
+  --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  dockersamples/visualizer
+```
+
+This will give you a graphical view of which containers are running on which nodes by visiting `http://<manager-ip>:8080`.
+
+---
+
 ## Monitoring and Management
 
 ### Key Management Commands
