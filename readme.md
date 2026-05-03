@@ -15,6 +15,10 @@ This repository documents my end-to-end learning path with Docker — from envir
 
 - **Environment setup** — Enabling virtualization, WSL 2, and installing Docker Desktop on Windows
 - **Core concepts** — Images, containers, volumes, networks, and the Docker CLI
+- **Docker Volumes** — Persistent storage, backup/restore strategies, and volume types ([volume-demo.md](volume-demo.md))
+- **Docker Networking** — Bridge networks, DNS resolution, and cross-container communication ([networking-demo.md](networking-demo.md))
+- **Registries** — Using Docker Hub and GitHub Container Registry ([ghcr-guide.md](ghcr-guide.md))
+- **Docker Swarm** — Orchestration, services, and rolling updates ([docker-swarm.md](docker-swarm.md))
 - **Docker Compose** — Defining and running multi-container applications
 - **Real-world workflows** — Building, tagging, and pushing images; writing efficient Dockerfiles
 

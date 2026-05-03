@@ -2,6 +2,11 @@
 
 All notable updates to this Docker learning repository are recorded here.
 
+## 2026-05-03
+
+- Finalized repository organization and updated `README.md` with links to all new guides.
+- Added comprehensive documentation on Docker Networking, Volumes, Registries (GHCR/Docker Hub), and Swarm Orchestration.
+
 ## 2026-04-26
 
 - Documented Docker Swarm service types (Replicated vs Global).
