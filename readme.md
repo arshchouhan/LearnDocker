@@ -26,6 +26,22 @@ This repository documents my end-to-end learning path with Docker — from envir
 
 ---
 
+## 📸 Docker Commands in Action
+
+Here are some real-world examples of Docker commands being executed, demonstrating image management and container workflows.
+
+| Searching for Images | Pulling and Running |
+| :---: | :---: |
+| ![Docker Search](Assets/Screenshot%202026-05-03%20181937.png) | ![Docker Pull](Assets/Screenshot%202026-05-03%20181910.png) |
+| *Finding Ubuntu on Docker Hub* | *Downloading and verifying hello-world* |
+
+| Committing Changes | Pushing to Registry |
+| :---: | :---: |
+| ![Docker Commit](Assets/Screenshot%202026-05-03%20182103.png) | ![Docker Push](Assets/Screenshot%202026-05-03%20182138.png) |
+| *Saving a modified container state* | *Uploading a custom image to Docker Hub* |
+
+---
+
 ## 🔗 Useful links
 
 | Resource | Description |
