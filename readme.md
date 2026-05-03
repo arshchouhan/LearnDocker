@@ -20,6 +20,8 @@ This repository documents my end-to-end learning path with Docker — from envir
 - **Registries** — Using Docker Hub and GitHub Container Registry ([ghcr-guide.md](ghcr-guide.md))
 - **Docker Swarm** — Orchestration, services, and rolling updates ([docker-swarm.md](docker-swarm.md))
 - **Docker Compose** — Defining and running multi-container applications
+- **Project: Python CI/CD** — Flask application with automated testing and deployment pipelines ([Pyhton CICd Project](projects/Pyhton%20CICd%20Project/))
+- **Project: IBM Code Engine** — DevOps capstone project featuring microservices and cloud deployment ([IBMCodeengienPRoject](projects/IBMCodeengienPRoject/))
 - **Real-world workflows** — Building, tagging, and pushing images; writing efficient Dockerfiles
 
 ---
